@@ -1,0 +1,19 @@
+Web Framework - Connect HTML to a Server Side Language.
+Flask - Web Framework
+Jinja2 - Templating Engine
+SQLAlchemy - Object Relational Mapper
+Flask-Login - Authentication Sessions
+
+Flask only does 1 job (Connects python to html) and Jinja2 which enables
+you pass python data types to HTML e.g passing a list from python file
+to HTML and Jinja2 performs python loops and If statements in HTML)
+
+HTTP Request Method
+  1. Request data from a server using a method.
+  2. HTML Data only, we use a GET Request.
+  3. Posting data to the server, we use a POST.
+
+HTTP URL/ROUTE
+   1. This is the domain name
+   2. '/' - Match it to def home() which returns and index.html
+   3. '/about-us' - Match it to def about() which returns about.html
