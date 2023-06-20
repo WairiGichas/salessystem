@@ -100,41 +100,53 @@
                       <div class="col-sm-10">
 
                       </form>
-                     
-                      {% for prods in products %}
-                      <tr>
-                      <th  scope = "col" > {{ prods [0] }} < /th >
-                      <td > {{prods[1]}} < /td >
-                      <td > {{prods[2]}} < /td >
-                      <td > {{prods[3]}} < /td >
-                      <td > {{prods[4]}} < /td >
-                      <th scope = "col" > {{prods[0]}} < /th >
-                      </tr >
-                      {% endfor %} 
+
+                      <form action="/process-contact" method="post">
+
+
+                        <label for="show">Show</label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="Your names in full.." required>
+                        <label for="entries">entries:</label>
+              
+                        <input type="search" value="Submit" />
+                      </form>
+
+                      <div class = "row">
+                        <table>
+                          <tr>
+                              <th>ID</th>
+                              <th>PRODUCT NAME</th>
+                              <th>BUYING PRICE</th>
+                              <th>SELLING PRICE</th>
+                              <th>STOCK QUANTITY</th>
+                          </tr>
+                  
+                          
+                              {% for prods in products%}
+                  <tr>
+                  <td>{{prods[0]}}</td>
+                  <td>{{prods[1]}}</td>
+                  <td>{{prods[2]}}</td>
+                  <td>{{prods[3]}}</td>
+                  <td>{{prods[4]}}</td>
+                  </tr>
+                  {% endfor %}
+                  
+                      </table>
+                    </div>
 
                       </div>
                     </div>
 
-                <form action="/process-contact" method="post">
-
-
-                    <label for="show">Show</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Your names in full.." required>
-                    <label for="entries">entries:</label>
-          
-                    <input type="search" value="Submit" />
-                  </form>
+            
                 </div>
             </div>     
         </div>
       </div>
     </div>
-    
   </body>
 </html>
-
-

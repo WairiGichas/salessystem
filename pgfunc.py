@@ -7,9 +7,9 @@ try:
 except Exception as error:
     print(error)
 
-def fetch_data(tbln):
+def fetch_data(tbname):
         try:
-            q = "SELECT * FROM " + tbln +  ";"
+            q = "SELECT * FROM " + tbname +  ";"
             cur.execute(q)
             records = cur.fetchall()
             return records
@@ -17,7 +17,11 @@ def fetch_data(tbln):
             return error
 
 
-products = fetch_data("products")
-
-sales = fetch_data("sales")
+def insert_products(v):
+    vs = str(v)
+    q = "insert into products(name,buying_price,selling_price,stock_quantity) "\
+        "values" + vs
+    cur.execute(q)
+    conn.commit()
+    return q
 

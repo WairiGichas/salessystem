@@ -31,6 +31,7 @@ def home():
 @app.route("/products")  # @ binds function about path
 def products():
     prods= fetch_data ("products")
+   
     # load records from our products table in the db
     # a list of tuples will be loaded
 
